@@ -19,9 +19,9 @@ requirements = [
     "numpy",
 ]
 
-test_requirements = [line.strip() for line in
-                     open('requirements_test.txt')
-                     if line.strip() and not line.strip().startswith('--')]
+test_requirements = ["pytest"
+                     "flake8",
+                     "tox"]
 
 
 
