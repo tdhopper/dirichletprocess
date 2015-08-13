@@ -25,6 +25,7 @@ clean-build:
 	rm -rf docs/_build
 	rm -rf docs/_static
 	rm -rf docs/_templates
+	rm -rf conda-builds
 
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
@@ -63,6 +64,9 @@ docs:
 release: clean
 	python setup.py sdist upload
 	python setup.py bdist_wheel upload
+	conda build --no-binstar-upload .
+	conda convert --platform all ${shell conda build . --output} --output-dir conda-builds
+	find conda-builds -type f -exec anaconda upload {} \;
 
 dist: clean
 	python setup.py sdist
