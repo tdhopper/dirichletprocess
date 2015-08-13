@@ -7,8 +7,7 @@ dirichlet
 
 Tools for Dirichlet Processes
 
--   Free software: BSD license
--   Documentation: <https://dirichlet.readthedocs.org>.
+-   Free software: MIT license
 
 Features
 --------
