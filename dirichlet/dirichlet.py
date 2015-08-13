@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from scipy.stats import beta
-from numpy.random import choice
+from numpy.random import choice, beta
 
 
 class DirichletProcess():
@@ -19,7 +18,7 @@ class DirichletProcess():
         if i is not None and i < len(self.weights):
             return self.cache[i]
         else:
-            stick_piece = beta(1, self.alpha).rvs() * remaining
+            stick_piece = beta(1, self.alpha) * remaining
             self.total_stick_used += stick_piece
             self.weights.append(stick_piece)
             new_value = self.base_measure()
