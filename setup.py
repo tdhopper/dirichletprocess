@@ -39,7 +39,7 @@ class PyTest(Command):
         raise SystemExit(errno)
 
 setup(
-    name='dirichlet',
+    name='dirichletprocess',
     version='0.1.0',
     description="Tools for Dirichlet Processes",
     long_description=readme + '\n\n' + history,
