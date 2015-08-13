@@ -26,8 +26,8 @@ class DirichletProcess():
 
     def __call__(self):
         remaining = 1.0 - self.total_stick_used
-        i = DirichletProcess.roll_die(self.weights + [remaining])
-        if i is not None and i < len(self.weights):
+        i = weighted_choice(self.weights + [remaining])
+        if i < len(self.weights):
             return self.cache[i]
         else:
             stick_piece = betavariate(1, self.alpha) * remaining
@@ -36,10 +36,3 @@ class DirichletProcess():
             new_value = self.base_measure()
             self.cache.append(new_value)
             return new_value
-
-    @staticmethod
-    def roll_die(weights):
-        if weights:
-            return weighted_choice(weights)
-        else:
-            return None
