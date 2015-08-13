@@ -19,11 +19,10 @@ requirements = [
     "numpy",
 ]
 
-test_requirements = [
-    "py.test",
-    "flake8",
-    "tox"
-]
+test_requirements = [line.strip() for line in
+                     open('requirements_test.txt')
+                     if line.strip() and not line.strip().startswith('--')]
+
 
 
 class PyTest(Command):
