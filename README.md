@@ -1,9 +1,9 @@
 dirichlet
 =========
 
-[![image](https://img.shields.io/travis/tdhopper/dirichlet.svg)](https://travis-ci.org/tdhopper/dirichletprocess)
+[![image](https://img.shields.io/travis/tdhopper/dirichletprocess.svg)](https://travis-ci.org/tdhopper/dirichletprocess)
 
-[![image](https://img.shields.io/pypi/v/dirichlet.svg)](https://pypi.python.org/pypi/dirichletprocess)
+[![image](https://img.shields.io/pypi/v/dirichletprocess.svg)](https://pypi.python.org/pypi/dirichletprocess)
 
 
 
