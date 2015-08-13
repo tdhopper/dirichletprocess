@@ -1,9 +1,11 @@
 dirichlet
 =========
 
-[![image](https://img.shields.io/travis/tdhopper/dirichlet.svg)](https://travis-ci.org/tdhopper/dirichlet)
+[![image](https://img.shields.io/travis/tdhopper/dirichlet.svg)](https://travis-ci.org/tdhopper/dirichletprocess)
 
-[![image](https://img.shields.io/pypi/v/dirichlet.svg)](https://pypi.python.org/pypi/dirichlet)
+[![image](https://img.shields.io/pypi/v/dirichlet.svg)](https://pypi.python.org/pypi/dirichletprocess)
+
+
 
 Construct a [Dirichlet Process](https://github.com/tdhopper/notes-on-dirichlet-processes) from any random sampler.
 
