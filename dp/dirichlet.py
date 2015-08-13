@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collections import Hashable
 
 from random import betavariate, uniform
 
@@ -19,6 +20,10 @@ class DirichletProcess():
     def __init__(self, base_measure, alpha):
         if alpha <= 0:
             raise ValueError("alpha must be a positive number")
+        if not hasattr(base_measure, '__call__'):
+            raise ValueError("base_measure must be callable")
+        if not isinstance(base_measure(), Hashable):
+            raise ValueError("base_measure must return hashable object")
         self.base_measure = base_measure
         self.alpha = alpha
 
