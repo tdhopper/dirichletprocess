@@ -14,4 +14,5 @@ from dirichlet import DirichletProcess
 
 def test_basic():
     dp = DirichletProcess(lambda: normalvariate(0, 1), alpha=0.1)
-    dp()
+    for _ in range(1000):
+        dp()
