@@ -40,7 +40,7 @@ class PyTest(Command):
 
 setup(
     name='dirichletprocess',
-    version='0.1.0',
+    version='0.2.0',
     description="Tools for Dirichlet Processes",
     long_description=readme + '\n\n' + history,
     author="Tim Hopper",
