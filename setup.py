@@ -47,15 +47,15 @@ setup(
     author_email='tdhopper@gmail.com',
     url='https://github.com/tdhopper/dirichlet',
     packages=[
-        'dirichlet',
+        'dp',
     ],
-    package_dir={'dirichlet':
-                 'dirichlet'},
+    package_dir={'dp':
+                 'dp'},
     include_package_data=True,
     install_requires=requirements,
     license="MIT",
     zip_safe=False,
-    keywords='dirichlet',
+    keywords='dirichlet process',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

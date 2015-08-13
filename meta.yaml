@@ -1,11 +1,7 @@
 package:
-  name: cookiecutter
-  version: "1.0.0"
+  name: dirichletprocess
+  version: "0.1.0"
 
-source:
-  fn: cookiecutter-1.0.0.tar.gz
-  url: https://pypi.python.org/packages/source/c/cookiecutter/cookiecutter-1.0.0.tar.gz
-  md5: 4174591b310812a6e61cfea9655c3c6f
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -31,30 +27,20 @@ requirements:
   build:
     - python
     - setuptools
-    - binaryornot >=0.2.0
-    - jinja2 >=2.7
-    - pyyaml >=3.10
-    - click <4.0
-    - mock
 
   run:
     - python
-    - binaryornot >=0.2.0
-    - jinja2 >=2.7
-    - pyyaml >=3.10
-    - click <4.0
-    - mock
 
 test:
   # Python imports
   imports:
-    - cookiecutter
+    - dp
 
-  commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
-    - cookiecutter --help
+    # - cookiecutter --help
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -65,9 +51,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/audreyr/cookiecutter
-  license: BSD License
-  summary: 'A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template.'
+  home: https://github.com/tdhopper/dirichlet
+  license: MIT License
+  summary: 'Tools for Dirichlet Processes'
 
 # See
 # http://docs.continuum.io/conda/build.html for

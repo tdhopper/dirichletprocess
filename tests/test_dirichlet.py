@@ -5,11 +5,11 @@
 test_dirichlet
 ----------------------------------
 
-Tests for `dirichlet` module.
+Tests for `dp` module.
 """
 from random import normalvariate
 
-from dirichlet import DirichletProcess
+from dp import DirichletProcess
 
 
 def test_basic():
