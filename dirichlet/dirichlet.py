@@ -1,6 +1,18 @@
 # -*- coding: utf-8 -*-
 
-from numpy.random import choice, beta
+from random import betavariate, uniform
+
+
+def weighted_choice(weights):
+    choices = range(len(weights))
+    total = sum(weights)
+    r = uniform(0, total)
+    upto = 0
+    for c, w in zip(choices, weights):
+        if upto + w > r:
+            return c
+        upto += w
+    raise Exception("Error in weighted_choice.")
 
 
 class DirichletProcess():
@@ -18,7 +30,7 @@ class DirichletProcess():
         if i is not None and i < len(self.weights):
             return self.cache[i]
         else:
-            stick_piece = beta(1, self.alpha) * remaining
+            stick_piece = betavariate(1, self.alpha) * remaining
             self.total_stick_used += stick_piece
             self.weights.append(stick_piece)
             new_value = self.base_measure()
@@ -28,6 +40,6 @@ class DirichletProcess():
     @staticmethod
     def roll_die(weights):
         if weights:
-            return choice(range(len(weights)), p=weights)
+            return weighted_choice(weights)
         else:
             return None

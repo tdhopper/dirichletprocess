@@ -15,7 +15,6 @@ with open('HISTORY.md') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    "numpy",
 ]
 
 test_requirements = ["pytest"
