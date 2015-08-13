@@ -17,6 +17,8 @@ def weighted_choice(weights):
 
 class DirichletProcess():
     def __init__(self, base_measure, alpha):
+        if alpha <= 0:
+            raise ValueError("alpha must be a positive number")
         self.base_measure = base_measure
         self.alpha = alpha
 
