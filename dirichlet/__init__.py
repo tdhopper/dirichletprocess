@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from dirichlet import *  # noqa
+from .dirichlet import DirichletProcess  # noqa
 
 
 __author__ = 'Tim Hopper'
